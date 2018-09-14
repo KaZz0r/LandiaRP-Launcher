@@ -3,10 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/LandiaRP_Launcher</output-path>
     <root id="archive" name="LandiaRP-Launcher.jar">
       <element id="module-output" name="Launcher" />
-      <element id="library" level="project" name="s-update-3.1.0-BETA" />
-      <element id="library" level="project" name="openauth-1.0.3-SNAPSHOT" />
-      <element id="library" level="project" name="swinger-1.0.0-BETA" />
-      <element id="library" level="project" name="openlauncherlib-3.0.4" />
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/src/main/ressources/META-INF/MANIFEST.MF" />
       </element>
