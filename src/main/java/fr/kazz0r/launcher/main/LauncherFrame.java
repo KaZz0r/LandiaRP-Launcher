@@ -28,7 +28,7 @@ public class LauncherFrame extends JFrame {
      addMouseMotionListener(mover);
      
      setVisible(true);
-     
+
    }
    
    public static void main(String[] args)
