@@ -13,7 +13,6 @@ public class LauncherFrame extends JFrame {
    private static LauncherFrame instance;
    private static CrashReporter crashReporter;
    private LauncherPanel launcherPanel;
-   git
    public LauncherFrame()
    {
      setTitle("La Pause RolePlay");
@@ -29,6 +28,7 @@ public class LauncherFrame extends JFrame {
      addMouseMotionListener(mover);
      
      setVisible(true);
+     
    }
    
    public static void main(String[] args)
