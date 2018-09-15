@@ -1,35 +1,48 @@
 /*    */ package fr.kazz0r.launcher.main;
-/*    */ import java.io.File;
-/*    */ import java.util.Arrays;
+/*    */
 
-/*    */ 
-/*    */ import fr.theshark34.openlauncherlib.LaunchException;
-/*    */ import fr.theshark34.openlauncherlib.external.ExternalLaunchProfile;
-/*    */ import fr.theshark34.openlauncherlib.external.ExternalLauncher;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.AuthInfos;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.GameFolder;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.GameInfos;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.GameTweak;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.GameType;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.GameVersion;
-/*    */ import fr.theshark34.openlauncherlib.minecraft.MinecraftLauncher;
-/*    */ import fr.theshark34.openlauncherlib.util.ProcessLogManager;
-/*    */ import fr.theshark34.supdate.BarAPI;
-/*    */ import fr.theshark34.supdate.SUpdate;
-/*    */ import fr.theshark34.supdate.application.integrated.FileDeleter;
-/*    */ import fr.theshark34.swinger.Swinger;
+import fr.theshark34.openlauncherlib.LaunchException;
+import fr.theshark34.openlauncherlib.external.ExternalLaunchProfile;
+import fr.theshark34.openlauncherlib.external.ExternalLauncher;
+import fr.theshark34.openlauncherlib.minecraft.*;
+import fr.theshark34.openlauncherlib.util.ProcessLogManager;
+import fr.theshark34.supdate.BarAPI;
+import fr.theshark34.supdate.SUpdate;
+import fr.theshark34.supdate.application.integrated.FileDeleter;
+import fr.theshark34.swinger.Swinger;
+
+import java.io.File;
+import java.util.Arrays;
+
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
+/*    */
 /*    */ 
 /*    */ public class Launcher
 /*    */ {
 /* 26 */   public static final GameVersion LPRP_VERSION = new GameVersion("1.7.10", GameType.V1_7_10);
-/* 27 */   public static final GameInfos LPRP_INFOS = new GameInfos("GTALife", LPRP_VERSION, new GameTweak[] { GameTweak.FORGE });
+	/* 27 */   public static final GameInfos LPRP_INFOS = new GameInfos("LandiaRP", LPRP_VERSION, new GameTweak[]{GameTweak.FORGE});
 /* 28 */   public static final File LPRP_DIR = LPRP_INFOS.getGameDir();
 /* 29 */   public static final File LPRP_CRASH_FOLDER = new File(LPRP_DIR, "crashes");
 /*    */   private static Thread updateThread;
 /*    */   
 public static void update() throws Exception {
 
-	SUpdate su = new SUpdate("http://www.gtalife.fr/launcher", LPRP_DIR);
+	SUpdate su = new SUpdate("http://62.210.219.74/launcher/", LPRP_DIR);
 	su.addApplication(new FileDeleter());
 
 	updateThread = new Thread() {

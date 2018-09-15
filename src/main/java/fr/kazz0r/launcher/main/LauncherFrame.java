@@ -1,11 +1,11 @@
  package fr.kazz0r.launcher.main;
- import javax.swing.JFrame;
 
- 
  import fr.theshark34.openlauncherlib.LanguageManager;
  import fr.theshark34.openlauncherlib.util.CrashReporter;
  import fr.theshark34.swinger.Swinger;
  import fr.theshark34.swinger.util.WindowMover;
+
+ import javax.swing.*;
  
 @SuppressWarnings("serial")
 public class LauncherFrame extends JFrame {
@@ -20,7 +20,7 @@ public class LauncherFrame extends JFrame {
      setDefaultCloseOperation(3);
      setLocationRelativeTo(null);
      setUndecorated(true);
-     setIconImage(Swinger.getResource("icone1.png"));
+       setIconImage(Swinger.getResource("icone.png"));
      setContentPane(this.launcherPanel = new LauncherPanel());
      
      WindowMover mover = new WindowMover(this);
@@ -36,7 +36,7 @@ public class LauncherFrame extends JFrame {
      LanguageManager.setLang(LanguageManager.FRENCH);
      
      Swinger.setSystemLookNFeel();
-     Swinger.setResourcePath("/src/java/launcher/ressources/");
+       Swinger.setResourcePath("src/main/ressources/");
      Launcher.LPRP_CRASH_FOLDER.mkdirs();
      crashReporter = new CrashReporter("LPRP Launcher", Launcher.LPRP_CRASH_FOLDER);
      
